@@ -5,7 +5,6 @@ import numpy
 import os
 from skimage.measure import compare_ssim as ssim
 
-# from skimage.measure import compare_psnr as psnr
 from utils.options import args
 
 
