@@ -6,7 +6,7 @@ import os
 import re
 import torch
 
-from options import args
+from utils.options import args
 
 
 def log_type(running_loss, sep_losses, runningavg, epoch, i):

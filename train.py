@@ -1,5 +1,4 @@
 import os
-import re
 import torch
 import torch.optim as optim
 import torchvision
@@ -7,12 +6,11 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 
 from Loss import Loss
-from dataset import DatasetManager, ImageManager
-from utils import *
-from options import args
+from utils.dataset import DatasetManager, ImageManager
+from utils.options import args
 
 def train():
-    from EDSR import EDSR
+    from model.EDSR import EDSR
     device = torch.device(args.cuda if torch.cuda.is_available() else "cpu")
     transform_ = transforms.Compose([
         transforms.ToTensor()

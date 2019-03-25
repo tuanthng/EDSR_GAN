@@ -3,7 +3,7 @@ from torch import nn
 import torch
 from Loss.Discriminator import Discriminator
 from utils import log
-from options import args
+from utils.options import args
 
 
 class GAN(nn.Module):

@@ -5,14 +5,14 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 
 
-from dataset import DatasetManager
-from options import args
+from utils.dataset import DatasetManager
+from utils.options import args
 
 
 def eval():
     os.makedirs(os.path.dirname('./out/' + args.version + '/eval/epoch' + str(args.eval_epoch)+'/'),
                 exist_ok=True)
-    from EDSR import EDSR
+    from model.EDSR import EDSR
     device = torch.device(args.cuda if torch.cuda.is_available() else "cpu")
 
     transform_ = transforms.Compose([

@@ -6,7 +6,7 @@ import os
 from skimage.measure import compare_ssim as ssim
 
 # from skimage.measure import compare_psnr as psnr
-from options import args
+from utils.options import args
 
 
 def psnr(img1, img2):
