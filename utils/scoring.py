@@ -28,7 +28,6 @@ def scoring():
     psnr_sum = 0
     ssim_sum = 0
     for r, g in zip(reals, generated):
-        print(r, g)
         r = cv2.imread('../data/div2k_valid/hr/' + r)
         g = cv2.imread('./out/' + args.version + '/eval/epoch' + str(args.eval_epoch) + '/' + g)
 
@@ -36,8 +35,8 @@ def scoring():
         ssim_ = ssim(r, g, multichannel=True, sigma=1.5, use_sample_covariance=False, gaussian_weights=True)
         psnr_sum += psnr_
         ssim_sum += ssim_
-        print('PNSR:{}\tSSIM:{}'.format(psnr_, ssim_))
-    print('AVG_PNSR:{}\tAVG_SSIM:{}\n'.format(psnr_sum / len(generated), ssim_sum / len(generated)))
+        log.write('PNSR:{}\tSSIM:{}'.format(psnr_, ssim_))
+    log.write('AVG_PNSR:{}\tAVG_SSIM:{}\n'.format(psnr_sum / len(generated), ssim_sum / len(generated)))
 
 
 if __name__ == '__main__':
