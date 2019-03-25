@@ -12,8 +12,7 @@ def psnr(img1, img2):
     mse = numpy.mean(numpy.square((img1 - img2)))
     if mse == 0:
         return 100
-    PIXEL_MAX = 255.0
-    return 10 * math.log10(PIXEL_MAX ** 2 / mse)
+    return 10 * math.log10(255 ** 2 / mse)
 
 
 def scoring():
