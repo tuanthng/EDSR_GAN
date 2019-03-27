@@ -1,5 +1,5 @@
 # EDSR_GAN
-###EDSR implementation with GAN
+### EDSR implementation with GAN
 
 This project is a test study of SISR models with GAN (most concretly EDSR).
 
