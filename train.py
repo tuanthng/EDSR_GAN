@@ -10,6 +10,8 @@ from utils.dataset import DatasetManager, ImageManager
 from utils.options import args
 from utils.utils import load
 from utils.utils import log
+from utils.utils import log_type
+
 
 def train():
     from model.EDSR import EDSR
