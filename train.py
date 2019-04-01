@@ -9,7 +9,7 @@ from Loss import Loss
 from utils.dataset import DatasetManager, ImageManager
 from utils.options import args
 from utils.utils import load
-
+from utils.utils import log
 
 def train():
     from model.EDSR import EDSR
