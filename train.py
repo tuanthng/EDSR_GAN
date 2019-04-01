@@ -8,6 +8,8 @@ from torchvision import transforms
 from Loss import Loss
 from utils.dataset import DatasetManager, ImageManager
 from utils.options import args
+from utils.utils import load
+
 
 def train():
     from model.EDSR import EDSR
