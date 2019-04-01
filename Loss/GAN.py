@@ -2,7 +2,7 @@ import torch.optim as optim
 from torch import nn
 import torch
 from Loss.Discriminator import Discriminator
-from utils import log
+from utils.utils import log
 from utils.options import args
 
 
